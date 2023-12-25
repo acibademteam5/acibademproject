@@ -7,8 +7,9 @@ import utilities.Driver;
 import utilities.ConfigurationReader;
 
 public class AcibdemStepDef {
+
     @Given("kullanici_acibadem_sayfasina_gider")
-    public void kullanicimanagementonSchoolsayfasinagider() {
+    public void kullanici_acibadem_sayfasina_gider() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
@@ -16,5 +17,6 @@ public class AcibdemStepDef {
     public void kullaniciSayfayiKapatir() {
         Driver.getDriver().close();
     }
+
 
 }
