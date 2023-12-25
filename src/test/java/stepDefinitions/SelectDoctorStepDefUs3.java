@@ -4,20 +4,34 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import pages.PageDoctors;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class SelectDoctorStepDefUs3 {
 
+    PageDoctors pageDoctors=new PageDoctors();
+    Actions actions = new Actions(Driver.getDriver());
 
     @When("kullanici_doktorlar_sekmesine_tiklar")
     public void kullanici_doktorlar_sekmesine_tiklar() {
+
+
+       ReusableMethods.clickWithTimeOut(pageDoctors.doktorlarSekmesi,5);
     }
 
     @Then("kullanici_doktorlar_sayfasini_gorur")
     public void kullanici_doktorlar_sayfasini_gorur() {
+        Assert.assertEquals(pageDoctors.doktorlarSayfasi.getText(),"Doktorlar");
     }
 
     @And("kullanici_sayfayi_asagi_kaydirir")
     public void kullanici_sayfayi_asagi_kaydirir() {
+        actions.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN).build().perform();
     }
 
 
