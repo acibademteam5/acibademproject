@@ -33,6 +33,4 @@ public class PageDoctors {
     @FindBy (xpath = "(//img[@class='doctor-lazy-load-img-cancelled'])[2]")
     public WebElement DoktorFotoSecme;
 
-    @FindBy( id = "doctorType")
-    public WebElement unvanSecme;
 }
