@@ -37,9 +37,6 @@ public class SelectDoctorStepDefUs3 extends ReusableMethods {
   //  pageDoctors.doktorlarSekmesi.click();
        ReusableMethods.clickWithTimeOut(pageDoctors.doktorlarSekmesi,2);
 
-
-       ReusableMethods.clickWithTimeOut(pageDoctors.doktorlarSekmesi,5);
-
     }
 
     @Then("kullanici_doktorlar_sayfasini_gorur")
@@ -48,7 +45,6 @@ public class SelectDoctorStepDefUs3 extends ReusableMethods {
         System.out.println(pageDoctors.doktorlarSayfasi.getText());
         Assert.assertEquals("Doktorlar",pageDoctors.doktorlarSayfasi.getText());
 
-        Assert.assertEquals(pageDoctors.doktorlarSayfasi.getText(),"Doktorlar");
 
     }
 

@@ -19,6 +19,7 @@ public class PageDoctors {
     @FindBy (xpath = "//span[text()='Doktorlar']")
     public WebElement doktorlarSayfasi;
     //span[@class='m-nav__link-text']
+    //span[text()='Doktorlar']
 
 
     @FindBy (id="location")
