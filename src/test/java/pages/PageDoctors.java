@@ -11,8 +11,10 @@ public class PageDoctors {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
     @FindBy (xpath = "(//*[@title='DOKTORLAR'])[1]")
     public WebElement doktorlarSekmesi;
+
 
     @FindBy (xpath = "//span[text()='Doktorlar']")
     public WebElement doktorlarSayfasi;

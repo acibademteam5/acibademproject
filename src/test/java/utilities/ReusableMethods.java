@@ -127,11 +127,13 @@ public abstract class ReusableMethods {
         }
     }
 
+
     public void scroll(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);",element);
 
     }
+
 
     /*
     public static void waitForPageToLoad(long timeout) {
