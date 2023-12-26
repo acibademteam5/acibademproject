@@ -15,7 +15,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
 
-public class ReusableMethods {
+
+
+public abstract class ReusableMethods {
+    protected static WebDriver driver;
     /*HOW DO YOU GET SCREENSHOT?
      * I use getScreenShotAs method to take a screenshot in selenium in my framework
      * I actually store the screenshot with unique name in my framework*/
@@ -123,6 +126,14 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
+
+
+    public void scroll(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",element);
+
+    }
+
 
     /*
     public static void waitForPageToLoad(long timeout) {
