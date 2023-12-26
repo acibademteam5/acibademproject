@@ -19,8 +19,10 @@ import pages.PageDoctors;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+
 import java.util.List;
 import java.util.Random;
+
 
 public class SelectDoctorStepDefUs3 extends ReusableMethods {
 
@@ -60,7 +62,10 @@ public class SelectDoctorStepDefUs3 extends ReusableMethods {
        // scroll(pageDoctors.unvanSecme);
         jse.executeScript("window.scrollTo(0,600)");
 
+
         //actions.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN).build().perform();
+
+        actions.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN).build().perform();
 
     }
 
