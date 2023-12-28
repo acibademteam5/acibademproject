@@ -28,7 +28,7 @@ public class SelectMedicalTechStepDefUs4 extends ReusableMethods {
     public void kullanici_medical_tech_sayfasini_gorur() {
         System.out.println(PageMedTech.MedTechYazi.getText());
         Assert.assertEquals("Medikal Teknolojiler",PageMedTech.MedTechYazi.getText());
-        //deneme
+
     }
 
     @Then("kullanici_cihaz_turu_kutusuna_tiklar")
