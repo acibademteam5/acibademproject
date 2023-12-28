@@ -19,13 +19,22 @@ public class PageLiveSupport {
     @FindBy (id = "webWidget")            //  xpath = "//iframe[@id='webWidget']"
     public WebElement iframeMessageBox;
 
-    @FindBy (xpath = "html/body/div//form/main/div//input")      //       xpath = "//input[@id='26val-field_1.3.10--input']"
-    public WebElement messageBox;
 
     @FindBy (xpath = "//button[@class='sc-htpNat cKUwht']")
     public WebElement startLiveSupport;
 
+    @FindBy (xpath = "html/body/div//form/main/div//input")      //       xpath = "//input[@id='26val-field_1.3.10--input']"
+    public WebElement adBox;
 
+    @FindBy (xpath = "html/body/div//form/main/div//input[@name='email']")
+    public WebElement epostaBox;
+
+
+    @FindBy (xpath = "html/body/div//form/main/div//textarea")
+    public WebElement mesajBox;
+
+    @FindBy (xpath = "html/body/div//main/div/div/div[@class='styles__Message-sc-46lcwk-0 cobzBX]")
+    public WebElement mesajGonderildi;
 
     public static void waitFor(int sec) {
         try {
