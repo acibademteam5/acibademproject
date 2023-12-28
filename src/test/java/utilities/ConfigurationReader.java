@@ -6,25 +6,52 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
-    static Properties properties;
+    //Önce properties dosyasındaki verileri okuyabilmek için java'dan properties class'ından bir obje oluştururuz
+    public static Properties properties;
+
+    //Herşeyden önce çalışması için static bloc içerisinde, oluşturmuş olduğum properties dosyasını tanımlar
+    //ve atamasını yaparız. FileInputStream ile dosya yolunu akışa alırız.
 
     static {
-
-        String path = "configuration.properties";
-        FileInputStream file = null;
+        String dosyaYolu = "configuration.properties";
         try {
-            file = new FileInputStream(path);
-            properties = new Properties();
-            properties.load(file);
+            FileInputStream fis = new FileInputStream(dosyaYolu);
+            properties = new Properties(); //objeyi oluşturduk ve atamasını gerçekleştirdik
+            properties.load(fis);//fis'in okuduğu bilgileri properties'e yükler
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
-        }
-        public static String getProperty(String key){
-            return properties.getProperty(key);
-
-
     }
+    //properties dosyasındaki key değerini alıp test methodumda kullanabilmek için bir method oluşturmalıyız
+    public static String getProperty(String Key){//String bir değer döndürmesi için String bir parametre atarız
+        /*
+            Test method'undan gönderdiğimiz string key değerini alıp ConfigReader class'ından
+        getProperty() methodunu kullanarak bu key'e ait value'yu bize getirir.
+         */
+
+
+        return properties.getProperty(Key);
+    }
+
+//    static Properties properties;
+//
+//    static {
+//
+//        String path = "configuration.properties";
+//        FileInputStream file = null;
+//        try {
+//            file = new FileInputStream(path);
+//            properties = new Properties();
+//            properties.load(file);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//
+//        }
+//        public static String getProperty(String key){
+//            return properties.getProperty(key);
+//
+//
+//    }
 }
