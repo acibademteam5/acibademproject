@@ -4,7 +4,7 @@ Feature: TC_01 Kullanici Iletisim Formlari Kismindaki Bireysel Bolumdeki Butun B
   Background: Acibadem hastanesine giris yap
     Given kullanici_acibadem_sayfasina_gider
 
-  Scenario Outline: TC_01Pozitif_test_butun bilgiler doldurularak gonderme yapilir
+  Scenario : TC_01Pozitif_test_butun bilgiler doldurularak gonderme yapilir
     When Kullanici Iletisim butonuna tiklar
     And kullanici sayfayi asagiya indirir
     And Kullanici Iletisim Formlari butonuna tiklar
