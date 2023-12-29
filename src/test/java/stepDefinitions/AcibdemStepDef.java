@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import utilities.Driver;
 import utilities.ConfigurationReader;
 
+import static utilities.ReusableMethods.bekle;
+
 public class AcibdemStepDef {
 
     @Given("kullanici_acibadem_sayfasina_gider")
@@ -19,4 +21,8 @@ public class AcibdemStepDef {
     }
 
 
+    @And("{int} saniye bekle")
+    public void saniyeBekle(int saniye) {
+        bekle(saniye);
+    }
 }
