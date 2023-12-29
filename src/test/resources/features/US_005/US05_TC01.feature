@@ -14,6 +14,7 @@ Feature: Kullanıcı menü butonundaki fiyat sor butonunu aktif olarak kullanma 
     And  KK kullanici KVKK metinini tiklayarak kabul eder
     And  KK kullanici Bilgilendirme metnini kabul eder
     And  KK kullanici Guvenlik kodunu girer
+    And  5 saniye bekle
     And  KK kullanici Gonder butonuna tiklar
     And  2 saniye bekle
     And  KK kullanici Mesajin gonderildigini dogrular

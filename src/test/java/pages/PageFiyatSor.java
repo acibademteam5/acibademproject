@@ -19,9 +19,22 @@ public class PageFiyatSor {
     @FindBy(xpath = "//*[@id='AskPriceContactForm_Firstname']")
     public WebElement adinizButonu;
 
-    @FindBy(xpath = "(//*[@class='dropdown form-control'])[1]")
-    public WebElement subeSecButonu;
+    @FindBy(xpath = "//*[@id='insuranceNameCheck']")
+    public WebElement sigortaBilgisi;
 
+
+    @FindBy(xpath = "//*[@id='AskPriceContactForm_Message']")
+    public WebElement mesajinizKutusu;
+
+
+    @FindBy(xpath = "//*[@id='KvkkFiyat']")
+    public WebElement kvkkMetniButonu;
+
+    @FindBy(xpath = "(//*[@class='user-layout'])[4]")
+    public WebElement bilgilendirmeMetni;
+
+    @FindBy(xpath = "(//*[@type='submit'])[2]")
+    public WebElement gonderButonu;
 
 
 }
